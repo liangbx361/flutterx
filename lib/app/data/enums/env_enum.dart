@@ -1,4 +1,4 @@
-enum Env {
+enum EnvEnum {
   mock,
   dev,
   qa,
@@ -7,13 +7,13 @@ enum Env {
   @override
   String toString() {
     switch (this) {
-      case Env.mock:
+      case EnvEnum.mock:
         return 'mock';
-      case Env.dev:
+      case EnvEnum.dev:
         return 'dev';
-      case Env.qa:
+      case EnvEnum.qa:
         return 'qa';
-      case Env.prod:
+      case EnvEnum.prod:
         return 'prod';
       default:
         throw Exception('Unknown environment: $this');
