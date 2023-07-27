@@ -6,8 +6,6 @@ import 'package:flutterx/app/data/enums/env_enums.dart';
 import 'app.dart';
  
 void main() async {
-  print("invoke main_dev.dart");
-
   await dotenv.load(fileName: ".env");
 
   FlavorConfig(
@@ -18,7 +16,5 @@ void main() async {
     },
   );
 
-  print(FlavorConfig.instance.name);
-
-  runApp(const MyApp());
+  runApp(const App());
 }

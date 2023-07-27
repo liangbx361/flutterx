@@ -10,13 +10,11 @@ void main() async {
 
   FlavorConfig(
     name: Env.mock.toString(),
-    
     variables: {
       "apiBaseUrl": "",
       "apiKey": "",
     },
   );
 
-
-  runApp(const MyApp());
+  runApp(const App());
 }

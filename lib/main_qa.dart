@@ -10,13 +10,11 @@ void main() async {
 
   FlavorConfig(
     name: Env.qa.toString(),
-    
     variables: {
       "apiBaseUrl": dotenv.env["QA_API_BASE_URL"],
       "apiKey": dotenv.env["QA_API_KEY"],
     },
   );
 
-
-  runApp(const MyApp());
+  runApp(const App());
 }
