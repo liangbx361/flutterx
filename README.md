@@ -7,11 +7,16 @@ Flutter工程实践
 
 * app
     * data
-        * enums
-        * service
+        * enum
+        * service 封装业务逻辑
             * xxx_service.dart
-        * provider
-        * model
+        * repository 封装数据访问逻辑
+            * xxx_repository.dart
+        * source 数据源
+            * local 封装本地数据源
+            * remote 封装远程数据源
+            * cache 封装缓存数据源
+        * model 领域对象
     * modules
     * global_widgets
     * routes
@@ -21,3 +26,8 @@ Flutter工程实践
         * theme
         * utils
         * log
+
+## 组件选型
+* GetX
+* dio
+* shared_preferences
