@@ -12,8 +12,5 @@ class GlobalData {
   get getToken => _instance!.token;
 
   set setToken(String token) => _instance!.token = token;
-
-  void logout() {
-    _instance!.token = null;
-  }
+  
 }

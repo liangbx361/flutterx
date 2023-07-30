@@ -1,16 +1,16 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
-import 'package:flutterx/app/data/source/remote/user_service.dart';
+import 'package:flutterx/app/data/source/remote/user_api.dart';
 
 import 'interceptor/auth_interceptor.dart';
 
 abstract class RemoteSource {
-  UserService get getUserService;
+  UserApi get userService;
 }
 
 class RemoteSourceImpl extends RemoteSource {
   late final Dio _dio;
-  late final UserService _userService;
+  late final UserApi _userApi;
 
   RemoteSourceImpl() {
     BaseOptions options = BaseOptions(
@@ -22,9 +22,9 @@ class RemoteSourceImpl extends RemoteSource {
     _dio = Dio(options);
     _dio.interceptors.add(AuthInterceptor());
     _dio.interceptors.add(LogInterceptor(responseBody: true));
-    _userService = UserServiceImpl(_dio);
+    _userApi = UserServiceImpl(_dio);
   }
 
   @override
-  UserService get getUserService => _userService;
+  UserApi get userService => _userApi;
 }

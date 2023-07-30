@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'app_bindings.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -6,7 +9,8 @@ class App extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      initialBinding: AppBindings(),
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.

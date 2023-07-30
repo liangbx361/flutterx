@@ -3,11 +3,11 @@ import 'package:dio/dio.dart';
 import '../../model/user.dart';
 import 'api_path.dart';
 
-abstract class UserService {
+abstract class UserApi {
   Future<User> getMe();
 }
 
-class UserServiceImpl extends UserService {
+class UserServiceImpl extends UserApi {
 
   final Dio _dio;
 
