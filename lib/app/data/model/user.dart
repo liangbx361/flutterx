@@ -1,15 +1,16 @@
+import 'package:flutterx/app/core/util/type_converter.dart';
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'user.g.dart';
 
 @JsonSerializable(
-  explicitToJson: true,
   fieldRename: FieldRename.snake,
 )
 @HiveType(typeId: 1)
 class User {
 
   @HiveField(0)
+  @JsonKey(fromJson: TypeConverter.intToString)
   final String id;
   @HiveField(1)
   final String name;

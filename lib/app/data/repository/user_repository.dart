@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class UserRepository {
   
-  User getMe() {
-    return Get.find()<RemoteSource>().userService.getMe();
+  Future<User> getMe() {
+    return Get.find<RemoteSource>().userService.getMe();
   }
 }

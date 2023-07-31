@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:flutterx/app/core/logger/easy_logger.dart';
+import 'package:get/get.dart';
 
+import 'app/data/repository/user_repository.dart';
 import 'app_bindings.dart';
 
 class App extends StatelessWidget {
@@ -51,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
+    _test();
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -61,8 +64,16 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _test() async {
+    UserRepository userRepository = Get.find<UserRepository>();
+    userRepository.getMe()
+        .then((value) => EasyLogger().d("name=${value.name}"))
+        .onError((error, stackTrace) => EasyLogger().e("error:$error"));
+  }
+
   @override
   Widget build(BuildContext context) {
+
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //

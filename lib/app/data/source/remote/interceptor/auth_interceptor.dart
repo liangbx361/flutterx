@@ -18,7 +18,7 @@ class AuthInterceptor implements InterceptorsWrapper {
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) {
     if (err.response?.statusCode == 401) {
-      GlobalData().logout();
+      GlobalData().token = null;
     }
     handler.next(err);
   }

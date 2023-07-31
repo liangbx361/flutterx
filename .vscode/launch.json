@@ -7,10 +7,6 @@
             "request": "launch",
             "program": "lib/main_mock.dart",
             "flutterMode": "debug",
-            "args": [
-                "--flavor",
-                "mock"
-            ]
         },
         {
             "name": "dev",
@@ -18,10 +14,6 @@
             "request": "launch",
             "program": "lib/main_dev.dart",
             "flutterMode": "debug",
-            "args": [
-                "--flavor",
-                "dev"
-            ]
         },
         {
             "name": "qa",
@@ -29,10 +21,6 @@
             "request": "launch",
             "program": "lib/main_qa.dart",
             "flutterMode": "release",
-            "args": [
-                "--flavor",
-                "qa"
-            ]
         },
         {
             "name": "prod",
@@ -40,10 +28,6 @@
             "request": "launch",
             "program": "lib/main_prod.dart",
             "flutterMode": "release",
-            "args": [
-                "--flavor",
-                "prod"
-            ]
         }
     ]
 }
