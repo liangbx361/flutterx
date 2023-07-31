@@ -41,7 +41,7 @@ dependencies:
   logger: ^1.1.0
 
   # 数据存储
-  hive: ^2.0.4
+  hive: ^2.2.3
   hive_flutter: ^1.1.0
   shared_preferences: ^2.0.8
 

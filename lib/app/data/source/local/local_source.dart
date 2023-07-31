@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutterx/app/core/logger/easy_logger.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 
 import '../../model/user.dart';
@@ -18,8 +18,11 @@ abstract class LocalSource {
 }
 
 class LocalSourceImpl implements LocalSource {
-  final String configBox = 'config';
-  final String userBox = 'user';
+  final String configBoxName = 'config';
+  final String userBoxName = 'user';
+
+  Box? configBox;
+  Box? userBox;
 
   LocalSourceImpl() {
     _init();
@@ -29,29 +32,29 @@ class LocalSourceImpl implements LocalSource {
     final appDocumentDir = await getApplicationDocumentsDirectory();
     EasyLogger().d('appDocumentDir: ${appDocumentDir.path}');
 
-    Hive.init(appDocumentDir.path);
+    await Hive.initFlutter(appDocumentDir.path);
     Hive.registerAdapter(UserAdapter());
-    Hive.openBox(configBox);
-    Hive.openBox(userBox);
+    configBox = await Hive.openBox(configBoxName);
+    userBox = await Hive.openBox(userBoxName);
   }
 
   @override
   getConfig(String key) {
-    return Hive.box(configBox).get(key);
+    return configBox?.get(key);
   }
 
   @override
   void saveConfig(String key, value) {
-    Hive.box(configBox).put(key, value);
+    configBox?.put(key, value);
   }
 
   @override
   User getUser() {
-    return Hive.box(userBox).getAt(0);
+    return userBox?.getAt(0);
   }
 
   @override
   void saveUser(User user) async {
-    Hive.box(userBox).putAt(0, user);
+    userBox?.putAt(0, user);
   }
 } 

@@ -8,7 +8,7 @@ import 'app/data/repository/user_repository.dart';
 class AppBindings implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<LocalSource>(() => LocalSourceImpl(), fenix: true);
+    Get.put<LocalSource>(LocalSourceImpl(), permanent: true); // or Get.put<LocalSource>(new LocalSourceImpl(), permanent: true
     Get.lazyPut<RemoteSource>(() => RemoteSourceImpl(), fenix: true);
     Get.lazyPut<ConfigRepository>(() => ConfigRepository(), fenix: false);
     Get.lazyPut<UserRepository>(() => UserRepository(), fenix: false);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterx/app/core/logger/easy_logger.dart';
+import 'package:flutterx/app/data/repository/config_repository.dart';
 import 'package:get/get.dart';
 
 import 'app/data/repository/user_repository.dart';
@@ -69,6 +70,11 @@ class _MyHomePageState extends State<MyHomePage> {
     userRepository.getMe()
         .then((value) => EasyLogger().d("name=${value.name}"))
         .onError((error, stackTrace) => EasyLogger().e("error:$error"));
+
+    ConfigRepository configRepository = Get.find<ConfigRepository>();
+    configRepository.saveConfig("video", "封神真好看");
+    String value = configRepository.getConfig("video");
+    EasyLogger().d("value=$value");
   }
 
   @override
