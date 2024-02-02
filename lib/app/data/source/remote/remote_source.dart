@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:dio_http2_adapter/dio_http2_adapter.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
-import 'package:flutterx/app/data/enum/env_enum.dart';
+import 'package:flutterx/app/core/logger/app_logger.dart';
 import 'package:flutterx/app/data/source/remote/user_api.dart';
 
 import 'interceptor/auth_interceptor.dart';
@@ -16,26 +17,25 @@ class RemoteSourceImpl extends RemoteSource {
   RemoteSourceImpl() {
     BaseOptions options = BaseOptions(
       baseUrl: FlavorConfig.instance.variables['apiBaseUrl'],
-      connectTimeout: 5000,
-      receiveTimeout: 5000,
+      connectTimeout: const Duration(seconds: 5),
+      receiveTimeout: const Duration(seconds: 5),
     );
 
     _dio = Dio(options);
     _dio.interceptors.add(AuthInterceptor());
-    _dio.interceptors.add(LogInterceptor(responseBody: true));
-
-    if (FlavorConfig.instance.name == EnvEnum.mock.toString()) {
-      _userApi = UserApiMockImpl();
-    } else {
-      _userApi = UserApiImpl(_dio);
+    if (AppLogger.instance.debug()) {
+      _dio.interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
     }
+
+    _dio.httpClientAdapter = Http2Adapter(
+      ConnectionManager(
+        idleTimeout: const Duration(seconds: 10),
+      ),
+    );
+
+    _userApi = UserApiImpl(_dio);
   }
 
   @override
   UserApi get userService => _userApi;
-}
-
-class RemoteSourceMockImple extends RemoteSource {
-  @override
-  UserApi get userService => throw UnimplementedError();
 }

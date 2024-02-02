@@ -1,12 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:flutterx/app/core/global_data.dart';
 
 class AuthInterceptor implements InterceptorsWrapper {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    if (GlobalData().getToken != null) {
-      options.headers['Authorization'] = 'Bearer ${GlobalData().getToken}';
-    }
     handler.next(options);
   }
 
@@ -16,9 +12,9 @@ class AuthInterceptor implements InterceptorsWrapper {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     if (err.response?.statusCode == 401) {
-      GlobalData().token = null;
+      // 处理401错误
     }
     handler.next(err);
   }
