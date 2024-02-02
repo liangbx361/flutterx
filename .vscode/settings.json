@@ -1,0 +1,25 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 120,
+    "chat.editor.wordWrap": "off",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+        120
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off",
+    "dart.lineLength": 120,
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.flutterSdkPath": ".fvm/flutter_sdk", // 指定FVM中的Flutter SDK路径
+    "dart.sdkPaths": [
+        ".fvm/flutter_sdk/bin/cache/dart-sdk"
+    ], // 指定FVM中Dart SDK的路径
+    "dart.flutterSdkVersion": null, // 留空，以使用FVM管理的Flutter版本
+    "dart.sdkPath": null // 留空，以使用FVM管理的Dart SDK版本
+}
