@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutterx/app/core/util/language_util.dart';
+import 'package:flutterx/app/values/app_config.dart';
 
 class GlobalData {
   static GlobalData? _instance;
@@ -16,7 +17,7 @@ class GlobalData {
   String? packageId;
   String? packageName;
   String? timeZone;
-  String languageCode = "en";
+  String languageCode = AppConfig.defaultLanguageCode;
   late Locale locale;
 
   AppLink? appLink;

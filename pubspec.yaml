@@ -64,6 +64,7 @@ dependencies:
 
   # UI库
   pull_to_refresh: ^2.0.0
+  fluttertoast: ^8.2.4
 
 dev_dependencies:
   flutter_test:

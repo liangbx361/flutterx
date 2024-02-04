@@ -15,5 +15,5 @@ void init(String env) async {
     },
   );
 
-  runApp(App());
+  runApp(const App());
 }
