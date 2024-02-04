@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
 import 'package:flutterx/app/data/enum/env_enum.dart';
-import 'package:joyreels/app/data/enums/env_enum.dart';
 import 'package:logger/logger.dart';
 
 class AppLogger {
