@@ -24,7 +24,7 @@ class App extends StatelessWidget {
           init: AppController(),
           builder: (controller) {
             return SystemUiTheme(
-              dark: controller.isDark,
+              dark: controller.dark,
               child: GetMaterialApp(
                 title: AppConfig.appName,
                 theme: AppThemes.createLightTheme(),
