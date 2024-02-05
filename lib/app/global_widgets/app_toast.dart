@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:flutterx/app/app_controller.dart';
-import 'package:flutterx/app/values/app_themes.dart';
+import 'package:joybox/app/app_controller.dart';
+import 'package:joybox/app/values/app_themes.dart';
 import 'package:get/get.dart';
 
 class AppToast {

@@ -1,5 +1,5 @@
-import 'package:flutterx/app/core/logger/app_logger.dart';
-import 'package:flutterx/app/tracker/app_tracker.dart';
+import 'package:joybox/app/core/logger/app_logger.dart';
+import 'package:joybox/app/tracker/app_tracker.dart';
 import 'package:get/get.dart';
 
 class PageTrackingMiddleware extends GetMiddleware {

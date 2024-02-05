@@ -1,5 +1,5 @@
-import 'package:flutterx/app/data/enum/env_enum.dart';
-import 'package:flutterx/init.dart';
+import 'package:joybox/app/data/enum/env_enum.dart';
+import 'package:joybox/init.dart';
 
 void main() async {
   init(EnvEnum.dev.toString());

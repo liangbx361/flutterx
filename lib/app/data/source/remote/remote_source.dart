@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:dio_http2_adapter/dio_http2_adapter.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
-import 'package:flutterx/app/core/logger/app_logger.dart';
-import 'package:flutterx/app/data/source/remote/user_api.dart';
+import 'package:joybox/app/core/logger/app_logger.dart';
+import 'package:joybox/app/data/source/remote/user_api.dart';
 
 import 'interceptor/auth_interceptor.dart';
 

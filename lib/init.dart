@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
-import 'package:flutterx/app/app.dart';
+import 'package:joybox/app/app.dart';
+import 'package:media_kit/media_kit.dart';
 
 void init(String env) async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
+  MediaKit.ensureInitialized();
 
+  await dotenv.load(fileName: ".env");
   FlavorConfig(
     name: env,
     variables: {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterx/app/data/enum/language_enum.dart';
+import 'package:joybox/app/data/enum/language_enum.dart';
 
 class LanguageUtil {
   static String getDeviceLanguageCode() {

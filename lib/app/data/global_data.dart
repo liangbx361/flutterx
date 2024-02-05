@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:flutterx/app/core/util/language_util.dart';
-import 'package:flutterx/app/values/app_config.dart';
+import 'package:joybox/app/core/util/language_util.dart';
+import 'package:joybox/app/values/app_config.dart';
 
 class GlobalData {
   static GlobalData? _instance;
@@ -21,6 +21,8 @@ class GlobalData {
   late Locale locale;
 
   AppLink? appLink;
+
+  double loadingLastProgress = 0;
 
   GlobalData._internal() {
     locale = LanguageUtil.toLocale(languageCode);

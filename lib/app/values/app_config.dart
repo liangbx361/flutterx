@@ -1,9 +1,9 @@
-import 'package:flutterx/app/data/enum/language_enum.dart';
+import 'package:joybox/app/data/enum/language_enum.dart';
 
 class AppConfig {
   AppConfig._();
 
-  static const String appName = 'FlutterX';
+  static const String appName = 'JoyBox';
 
   static const String termsOfServiceUrl = '';
 

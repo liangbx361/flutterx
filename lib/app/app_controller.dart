@@ -1,5 +1,5 @@
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:flutterx/app/core/logger/app_logger.dart';
+import 'package:joybox/app/core/logger/app_logger.dart';
 import 'package:get/get.dart';
 
 class AppController extends GetxController {

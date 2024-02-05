@@ -1,4 +1,4 @@
-name: flutterx
+name: joybox
 description: A Flutter project framework.
 
 # The following line prevents the package from being accidentally published to
@@ -53,6 +53,11 @@ dependencies:
   flutter_svg: ^2.0.9
   lottie: ^2.7.0
   cached_network_image: ^3.3.0
+
+  # 视频库
+  media_kit: ^1.1.10
+  media_kit_video: ^1.2.4
+  media_kit_libs_video: ^1.0.4            
 
   # 屏幕适配
   flutter_screenutil: ^5.9.0

@@ -1,5 +1,5 @@
-import 'package:flutterx/app/modules/home/home_page.dart';
-import 'package:flutterx/app/modules/splash/splash_page.dart';
+import 'package:joybox/app/modules/home/home_page.dart';
+import 'package:joybox/app/modules/splash/splash_page.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {

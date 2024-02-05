@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterx/app/values/app_colors.dart';
+import 'package:joybox/app/values/app_colors.dart';
 
 class SystemUiTheme extends StatelessWidget {
   final bool dark;

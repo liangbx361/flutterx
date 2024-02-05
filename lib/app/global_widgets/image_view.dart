@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lottie/lottie.dart';
 
-class AppNetworkImage extends StatelessWidget {
+class NetworkImageView extends StatelessWidget {
   final String? placeholder;
   final String imageUrl;
   final double? width;
@@ -11,7 +11,7 @@ class AppNetworkImage extends StatelessWidget {
   final double radius;
   final BoxFit fit;
 
-  const AppNetworkImage({
+  const NetworkImageView({
     super.key,
     required this.imageUrl,
     this.placeholder,
@@ -25,7 +25,7 @@ class AppNetworkImage extends StatelessWidget {
   Widget build(BuildContext context) {
     PlaceholderWidgetBuilder? placeHolderBuilder;
     if (placeholder != null) {
-      placeHolderBuilder = (context, url) => AppLocalImage(
+      placeHolderBuilder = (context, url) => LocalImageView(
             imagePath: placeholder!,
             width: width,
             height: height,
@@ -34,7 +34,7 @@ class AppNetworkImage extends StatelessWidget {
     }
     LoadingErrorWidgetBuilder? errorWidgetBuilder;
     if (placeholder != null) {
-      errorWidgetBuilder = (context, url, error) => AppLocalImage(
+      errorWidgetBuilder = (context, url, error) => LocalImageView(
             imagePath: placeholder!,
             width: width,
             height: height,
@@ -71,7 +71,7 @@ class AppNetworkImage extends StatelessWidget {
   }
 }
 
-class AppLocalImage extends StatelessWidget {
+class LocalImageView extends StatelessWidget {
   final String imagePath;
   final VoidCallback? onPressed;
   final double? width;
@@ -81,7 +81,7 @@ class AppLocalImage extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final AnimationController? animationController;
 
-  const AppLocalImage({
+  const LocalImageView({
     super.key,
     required this.imagePath,
     this.onPressed,
@@ -96,7 +96,7 @@ class AppLocalImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (imagePath.endsWith(".svg")) {
-      return SvgImage(
+      return SvgImageView(
         imagePath: imagePath,
         onPressed: onPressed,
         width: width,
@@ -153,7 +153,7 @@ class AppLocalImage extends StatelessWidget {
   }
 }
 
-class SvgImage extends StatelessWidget {
+class SvgImageView extends StatelessWidget {
   final String imagePath;
   final double? width;
   final double? height;
@@ -161,7 +161,7 @@ class SvgImage extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final VoidCallback? onPressed;
 
-  const SvgImage({
+  const SvgImageView({
     super.key,
     required this.imagePath,
     this.width,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:flutterx/app/app_controller.dart';
-import 'package:flutterx/app/data/global_data.dart';
-import 'package:flutterx/app/global_widgets/system_ui_theme.dart';
-import 'package:flutterx/app/modules/splash/splash_page.dart';
-import 'package:flutterx/app/routes/app_routes.dart';
-import 'package:flutterx/app/values/app_config.dart';
-import 'package:flutterx/app/values/app_themes.dart';
-import 'package:flutterx/generated/locales.g.dart';
+import 'package:joybox/app/app_controller.dart';
+import 'package:joybox/app/data/global_data.dart';
+import 'package:joybox/app/global_widgets/system_ui_theme.dart';
+import 'package:joybox/app/modules/splash/splash_page.dart';
+import 'package:joybox/app/routes/app_routes.dart';
+import 'package:joybox/app/values/app_config.dart';
+import 'package:joybox/app/values/app_themes.dart';
+import 'package:joybox/generated/locales.g.dart';
 import 'package:get/get.dart';
 
 class App extends StatelessWidget {

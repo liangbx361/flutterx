@@ -1,3 +1,8 @@
 {
-    "hello": "Hello, English World!"
+    "hello": "Hello, English World!",
+    "refresh": "Refresh",
+    "empty": "empty",
+    "networkError": "Network connection error.Please check your network settings and try again.",
+    "loadFailed": "Load failed",
+    "tryAgain": "Try again"
 }

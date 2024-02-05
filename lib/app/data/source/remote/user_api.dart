@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutterx/app/data/model/remote/user.dart';
+import 'package:joybox/app/data/model/remote/user.dart';
 
 import 'api_path.dart';
 

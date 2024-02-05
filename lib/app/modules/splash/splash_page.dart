@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterx/generated/locales.g.dart';
+import 'package:joybox/generated/locales.g.dart';
 import 'package:get/get.dart';
 
 class SplashPage extends StatelessWidget {
